@@ -41,49 +41,46 @@ function Login(params) {
   };
   return (
     <div>
-      <h1 style={{ textAlign: "center", margin: 10 }}>Login</h1>
-      <div className="row">
-        <div className="col"></div>
-        <div className="col">
-          <div className="form">
-            <div className="mb-3">
-              <label htmlFor="">Email</label>
-              <input
-                type="text"
-                className="form-control"
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-            </div>
-            <div className="mb-3">
-              <div className="mb-3">Don't have an account? Then Register</div>
-              <button onClick={handleLogin} className="btn btn-success">
-                Login
-              </button>
-              {"   "}
-              <button
-                onClick={() => {
-                  navigate("/signup");
-                }}
-                className="btn btn-success"
-              >
-                Register
-              </button>
-            </div>
-          </div>
+      <div
+        className="form"
+        style={{
+          marginLeft: "5%",
+          marginRight: "5%",
+          maxWidth: "400px",
+          padding: "20px",
+        }}
+      >
+        <input
+          type="text"
+          className="form-control"
+          placeholder="EMAIL"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+        <input
+          type="password"
+          placeholder="PASSWORD"
+          className="form-control"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+        <div className="mb-3">
+          <div className="mb-3">Don't have an account? Then Register</div>
+          <button onClick={handleLogin} className="btn btn-success">
+            Login
+          </button>
+          {"   "}
+          <button
+            onClick={() => {
+              navigate("/signup");
+            }}
+            className="btn btn-success"
+          >
+            Register
+          </button>
         </div>
-        <div className="col"></div>
       </div>
     </div>
   );

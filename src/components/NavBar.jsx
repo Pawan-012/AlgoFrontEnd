@@ -56,6 +56,7 @@ function NavigationBar01() {
         >
           Home
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -74,6 +75,7 @@ function NavigationBar01() {
             >
               Copy Trading
             </Nav.Link>
+
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="/3minStr">3MinStrategy</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -87,6 +89,49 @@ function NavigationBar01() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        {!authState.isLogin && (
+          <div
+            style={{ display: "flex" }}
+            onClick={(e) => {
+              console.log(authState.isLogin);
+            }}
+          >
+            <Button
+              style={{ margin: "1%" }}
+              variant="primary"
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              LOGIN
+            </Button>{" "}
+            <Button style={{ margin: "1%" }} onClick={() => navigate("signup")}>
+              SignUp
+            </Button>
+          </div>
+        )}
+
+        {authState.isLogin && (
+          <div style={{ marginRight: "1%", display: "flex" }}>
+            <Button
+              style={{ margin: "3px" }}
+              onClick={handleLogout}
+              variant="danger"
+            >
+              Logout
+            </Button>
+
+            <Button
+              style={{ margin: "3px" }}
+              onClick={() => {
+                navigate("/profile");
+              }}
+              variant="success"
+            >
+              Profile
+            </Button>
+          </div>
+        )}
       </Container>
       <button
         onClick={() => {
@@ -95,50 +140,6 @@ function NavigationBar01() {
       >
         CheckReduxStore
       </button>
-      {!authState.isLogin && (
-        <div
-          style={{ marginRight: "5%", color: "red", display: "flex" }}
-          onClick={(e) => {
-            console.log(authState.isLogin);
-          }}
-        >
-          You Are Not Logged In
-          <Button
-            style={{ margin: "1%" }}
-            variant="primary"
-            onClick={() => {
-              navigate("/login");
-            }}
-          >
-            LOGIN
-          </Button>{" "}
-          <Button style={{ margin: "1%" }} onClick={() => navigate("signup")}>
-            SignUp
-          </Button>
-        </div>
-      )}
-
-      {authState.isLogin && (
-        <div style={{ marginRight: "1%", display: "flex" }}>
-          <Button
-            style={{ margin: "3px" }}
-            onClick={handleLogout}
-            variant="danger"
-          >
-            Logout
-          </Button>
-
-          <Button
-            style={{ margin: "3px" }}
-            onClick={() => {
-              navigate("/profile");
-            }}
-            variant="success"
-          >
-            Profile
-          </Button>
-        </div>
-      )}
     </Navbar>
   );
 }
