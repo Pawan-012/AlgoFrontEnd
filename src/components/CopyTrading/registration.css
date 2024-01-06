@@ -1,0 +1,26 @@
+.inputCls {
+  margin-top: 10px;
+  display: block;
+}
+.form {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(227, 252, 252);
+  margin-top: 20px;
+  border: 2px solid rgb(246, 191, 191);
+}
+select {
+  margin: 10px;
+}
+.divBorder {
+  border-radius: 10px;
+  border: solid rgb(169, 167, 167);
+  /* width: 40%; */
+  margin-left: 3%;
+  margin-right: 20%;
+  margin-top: 20px;
+  padding: 1%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
