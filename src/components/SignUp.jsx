@@ -16,34 +16,37 @@ function SignUp(params) {
   return (
     <center style={{ margin: "10px" }}>
       <div className="form" style={{ maxWidth: "400px" }}>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="EMAIL"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-
-        <input
-          type={passwordTypeState}
-          className="form-control"
-          placeholder="PASSWORD"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-        <div
-          style={{ margin: "3px" }}
-          onClick={() => {
-            if (passwordTypeState == "text") {
-              setPasswordTypeState("password");
-            } else {
-              setPasswordTypeState("text");
-            }
-          }}
-        >
-          EYE
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="EMAIL"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+        </div>
+        <div className="mb-3" style={{ display: "flex" }}>
+          <input
+            type={passwordTypeState}
+            className="form-control"
+            placeholder="PASSWORD"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+          <div
+            style={{ margin: "3px" }}
+            onClick={() => {
+              if (passwordTypeState == "text") {
+                setPasswordTypeState("password");
+              } else {
+                setPasswordTypeState("text");
+              }
+            }}
+          >
+            EYE
+          </div>
         </div>
         {/* first Name */}
         <div className="mb-3">
