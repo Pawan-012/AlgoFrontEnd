@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+
 # AlgoFrontEnd
-This is a front end code of the algo trading software. Built in react technology where we have used the Redux for state storing , Bootstrap for ui,HTML , CSS for better Experience.
-=======
+
+# This is a front end code of the algo trading software. Built in react technology where we have used the Redux for state storing , Bootstrap for ui,HTML , CSS for better Experience.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
+testtest
 In the project directory, you can run:
 
 ### `npm start`
@@ -72,4 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> pawan-dev
+
+> > > > > > > pawan-dev
