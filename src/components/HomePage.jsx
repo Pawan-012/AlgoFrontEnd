@@ -4,6 +4,7 @@ import axios from "axios";
 import NavigationBar01 from "./NavBar";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
+import Carousal from "./Carousal";
 
 function HomePage(params) {
   const [dataFromBack, setDataFromBack] = useState("");
@@ -42,6 +43,7 @@ function HomePage(params) {
         {dataFromBack}
         {counter}
       </h1>
+      <Carousal />
     </>
   );
 }
