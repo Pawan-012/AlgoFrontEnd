@@ -17,9 +17,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - run: cd /home/ubuntu/GITREPO
-      - run: git pull
-      - run: cd /home/ubuntu/GITREPO/AlgoFrontEnd
+      # - run: cd /home/ubuntu/GITREPO
+      # - run: pwd
+      # - run: git pull
+      # - run: cd /home/ubuntu/GITREPO/AlgoFrontEnd
       - run: sudo npm install
       - run: sudo npm run build
       # - uses: actions/checkout@v3
