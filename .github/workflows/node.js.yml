@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - run: npm install react-scripts --save-dev
+      - run: rm package-lock.json
       - run: npm install
       - run: npm run build
       - run: sudo chmod +x  /home/ubuntu/FrontEnd/_work/AlgoFrontEnd/AlgoFrontEnd/build
