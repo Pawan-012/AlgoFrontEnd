@@ -17,14 +17,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm install react-scripts --save-dev
-      - run: rm package-lock.json
-      - run: npm install
-      - run: npm run build
-      - run: sudo chmod +x  /home/ubuntu/FrontEnd/_work/AlgoFrontEnd/AlgoFrontEnd/build
+      - run: cd /home/ubuntu/GITREPO
+      - run: git pull
+      - run: cd /home/ubuntu/GITREPO/AlgoFrontEnd
+      - run: sudo npm install
+      - run: sudo npm run build
+      # - uses: actions/checkout@v3
+      # - name: Use Node.js ${{ matrix.node-version }}
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      #     cache: "npm"
+      # - run: npm install react-scripts --save-dev
+      # - run: sudo rm package-lock.json
+      # - run: npm install
+      # - run: npm run build
+      # - run: sudo chmod +x  /home/ubuntu/FrontEnd/_work/AlgoFrontEnd/AlgoFrontEnd/build
