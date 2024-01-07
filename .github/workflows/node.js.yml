@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: cd /home/ubuntu/FrontEnd/_work/AlgoFrontEnd/AlgoFrontEnd
+      - run: npm install
       - run: npm run build
+      - run: sudo chmod +x  /home/ubuntu/FrontEnd/_work/AlgoFrontEnd/AlgoFrontEnd/build
