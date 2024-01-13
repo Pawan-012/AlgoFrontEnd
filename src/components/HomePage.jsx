@@ -5,6 +5,7 @@ import NavigationBar01 from "./NavBar";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import Carousal from "./Carousal";
+import ContactUs from "./HomeComponent/ContactUs";
 
 function HomePage(params) {
   const [dataFromBack, setDataFromBack] = useState("");
@@ -20,30 +21,8 @@ function HomePage(params) {
 
   return (
     <>
-      <center></center>
-      <Button
-        variant="primary"
-        onClick={() => {
-          navigate("/login");
-        }}
-      >
-        LOGIN
-      </Button>{" "}
-      <Button variant="secondary">Secondary</Button>{" "}
-      <Button variant="success">Success</Button>{" "}
-      <Button variant="warning">Warning</Button>{" "}
-      <Button variant="danger">Danger</Button>{" "}
-      <Button variant="info" onClick={TestFunction}>
-        TEST
-      </Button>{" "}
-      <Button variant="light">Light</Button>{" "}
-      <Button variant="dark">Dark</Button>
-      <Button variant="link">Link</Button>
-      <h1>
-        {dataFromBack}
-        {counter}
-      </h1>
       <Carousal />
+      <ContactUs />
     </>
   );
 }
